@@ -1,6 +1,1 @@
-{
-    "title": "{{ .Title }}",
-    "type": "{{ .Type }}",
-	"mascot": "{{ .Params.mascot }}",
-	"permalink": "{{ .Permalink }}"
-}
+{{- (dict "title" .Title "type" .Type "mascot" .Params.mascot "permalink" .Permalink) | jsonify -}}
