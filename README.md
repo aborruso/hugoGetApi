@@ -15,7 +15,7 @@ Demo Site: https://hugo-api-demo.netlify.com/
 code](https://github.com/regisphilibert/hugoGetApi), but only in this fork where
 I am experimenting with the `dict` + `jsonify` syntax.**
 
-Current `dict` + `jsonify` approach is used. But as `.Render` use is also
+Currently `dict` + `jsonify` approach is used. But as `.Render` use is also
 needed, the rendered `"item"` gets _jsonified_ twice and causes JSON for that
 rendered item to become escaped as seen
 [here](https://hugo-api-demo.netlify.com/players/index.json).
