@@ -17,5 +17,21 @@ I am experimenting with the `dict` + `jsonify` syntax.**
 
 Currently `dict` + `jsonify` approach is used. But as `.Render` use is also
 needed, the rendered `"item"` gets _jsonified_ twice and causes JSON for that
-rendered item to become escaped as seen
-[here](https://hugo-api-demo.netlify.com/players/index.json).
+rendered item to become escaped.
+
+### Hack
+
+To around around that, this [hack][] is used.
+
+This hack assumes that the actual JSON will never have:
+
+- `{` at beginning of a string
+- `}` at the end of a string
+- Escaped double quote (`\"`) anywhere in a string
+
+## Example output
+
+- https://hugo-api-demo.netlify.com/players/index.json
+
+
+[hack]: https://github.com/kaushalmodi/hugoGetApi/commit/cd15f4ba728dcc51851130fea9bf3bf03cbeb1c1
