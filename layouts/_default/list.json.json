@@ -13,5 +13,5 @@
     {{- $.Scratch.Add "__index_items" (.Render "item") -}}
   {{ end }}
   {{ $.Scratch.SetInMap "__index" "items" ($.Scratch.Get "__index_items") }}
-  {{- $.Scratch.Get "__index" | jsonify | replaceRE "\\\\\"" "\"" | replaceRE "\"\\{" "{" | replaceRE "\\}\"" "}" -}}
+  {{- $.Scratch.Get "__index" | jsonify | replaceRE "\\\\\"" "\"" | replaceRE "\"\\{" "{" | replaceRE "\\}\"" "}" | replaceRE "\\\\n\"" "" -}}
 {{ end }}
