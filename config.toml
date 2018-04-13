@@ -1,10 +1,10 @@
-baseURL = "http://hugo.api/"
+baseURL = "https://example.com/"
 languageCode = "en-us"
-title = "rougon"
+title = "Hugo API Demo"
 
 [outputs]
   page = ["json"]
-  home = ["json"]
+  home = ["html", "json"]
   section = ["json"]
   taxonomy = ["json"]
   taxonomyTerm = [ "json" ]

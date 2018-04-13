@@ -1,0 +1,9 @@
+<h1> {{ .Title }}</h1>
+<h2> JSON files</h2>
+<ul>
+    {{ range .Site.Pages }}
+        {{ if (findRE "\\.json$" .Permalink) }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    {{ end }}
+</ul>
